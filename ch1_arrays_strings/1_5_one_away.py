@@ -7,11 +7,11 @@ def str_edit(a, b):
 	elif (abs(alen-blen== 1)):
 		return check_ins_rem(a,b,alen,blen)
 	else:
-		return false;
+		return False;
 
 def check_replace(a, b, slen):
 	if(a == b): #not needed
-		return true
+		return True
 
 	diff_cnt = 0
 	for i,j in zip(a, b):
@@ -29,6 +29,7 @@ def check_ins_rem(a, b, alen, blen):
 	
 	j = 0
 	k = 0
+	diff_cnt = 0
 
 	while (j < alen and k < blen):
 		if(a[j] != b[k]):
@@ -42,6 +43,12 @@ def check_ins_rem(a, b, alen, blen):
 			k+=1
 
 		if (diff_cnt > 1):
-			return false
+			return False
 
-	return true
+	return True
+
+if __name__ == "__main__":
+	print "T: " + str(str_edit("pale","ple"))
+	print "T: " + str(str_edit("pales","pale"))
+	print "T: " + str(str_edit("pale","bale"))
+	print "F: " + str(str_edit("pale","bake"))
