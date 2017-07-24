@@ -7,7 +7,7 @@ def str_edit(a, b):
 	elif (abs(alen-blen== 1)):
 		return check_ins_rem(a,b,alen,blen)
 	else:
-		return False;
+		return False
 
 def check_replace(a, b, slen):
 	if(a == b): #not needed
